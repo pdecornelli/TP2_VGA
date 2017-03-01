@@ -54,8 +54,8 @@ uint8_t VGA_RAM1[2][(VGA_DISPLAY_X + 1) * VGA_DISPLAY_Y];
 // Grundfreq = 2 * APB1 (APB1 = 48 MHz) => TIM_CLK = 84MHz
 // Freq = 84MHz / 1/2668 = 31,48kHz => T = 31,76us
 // 1TIC = 11,90ns
-#define  VGA_TIM2_HSYNC_PERIODE   2670
-#define  VGA_TIM2_HSYNC_PRESCALE     0
+#define  VGA_TIM4_HSYNC_PERIODE   2670
+#define  VGA_TIM4_HSYNC_PRESCALE     0
 
 #define  VGA_TIM2_HSYNC_IMP       320  // Hsync longitud del pulso (3,81us)
 #define  VGA_TIM2_HTRIGGER_START  480  // HSync + BackPorch (5,71us)

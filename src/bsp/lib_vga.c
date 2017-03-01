@@ -170,8 +170,8 @@ void VGA_InitTIM(void) {
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
 
 	// Timer2 init
-	TIM_TimeBaseStructure.TIM_Period = VGA_TIM2_HSYNC_PERIODE;
-	TIM_TimeBaseStructure.TIM_Prescaler = VGA_TIM2_HSYNC_PRESCALE;
+	TIM_TimeBaseStructure.TIM_Period = VGA_TIM4_HSYNC_PERIODE;
+	TIM_TimeBaseStructure.TIM_Prescaler = VGA_TIM4_HSYNC_PRESCALE;
 	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
 	TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
@@ -203,8 +203,7 @@ void VGA_InitTIM(void) {
 // Init interrupciones
 // ------------------------------------------------ --------------
 void VGA_InitINT(void) {
-	NVIC_InitTypeDef NVIC_InitStructure;
-
+	NVIC_InitTypeDef   NVIC_InitStructure;
 	// Interrupcion de la DMA cuando termina la transmicion
 	// DMA2, Stream5, Channel6
 
